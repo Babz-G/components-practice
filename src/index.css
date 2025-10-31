@@ -1,0 +1,171 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #1a0033 0%,
+    #4a0e4e 25%,
+    #1a0033 50%,
+    #0e3a4a 75%,
+    #1a0033 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+h1 {
+  font-size: 2.3rem;
+  background: linear-gradient(90deg, #8b7fb8, #5a9db8, #c77bb8, #8b7fb8);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGradient 5s ease infinite;
+}
+h2 {
+  font-size: 1.4rem;
+  color: #9d8ec4;
+  text-shadow: 0 0 10px rgba(157, 142, 196, 0.3);
+}
+
+@keyframes textGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+p {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: gray;
+  line-height: 1.8;
+}
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 370px); /* Same as card-container */
+  gap: 1.5rem; /* Same gap as cards */
+  margin: 2rem auto; /* Same margin */
+}
+button {
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: linear-gradient(90deg, #8b7fb8, #5a9db8, #c77bb8, #8b7fb8);
+  background-size: 300% 300%;
+  animation: buttonGradient 4s ease infinite;
+  border: none; /* Remove default border */
+  color: white; /* Make text white so it shows on gradient */
+}
+
+@keyframes buttonGradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly grow on hover */
+  box-shadow: 0 0 20px rgba(139, 127, 184, 0.6);
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 370px);
+  gap: 1.5rem;
+  margin: 2rem auto;
+}
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(30, 30, 30, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(100, 108, 255, 0.4);
+}
+.card:nth-child(1) {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.card:nth-child(2) {
+  animation: fadeIn 0.8s ease-in 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.card:nth-child(3) {
+  animation: fadeIn 0.8s ease-in 0.4s;
+  animation-fill-mode: backwards;
+}
+
+.simple-badge {
+  background-color: #2a2a2a;
+  border-radius: 25px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.simple-badge p {
+  margin: 0;
+}
+
+.status-online .dot {
+  background-color: #5a9db8;
+  box-shadow: 0 0 5px #5a9db8;
+}
+.status-online p {
+  color: #5a9db8;
+}
+
+.status-offline .dot {
+  background-color: #615a6b;
+  box-shadow: 0 0 5px #615a6b;
+}
+.status-offline p {
+  color: #615a6b;
+}
