@@ -66,9 +66,9 @@ p {
 }
 .button-container {
   display: grid;
-  grid-template-columns: repeat(3, 370px); /* Same as card-container */
-  gap: 1.5rem; /* Same gap as cards */
-  margin: 2rem auto; /* Same margin */
+  grid-template-columns: repeat(3, 370px);
+  gap: 1.5rem;
+  margin: 2rem auto;
 }
 button {
   border-radius: 8px;
@@ -81,8 +81,8 @@ button {
   background: linear-gradient(90deg, #8b7fb8, #5a9db8, #c77bb8, #8b7fb8);
   background-size: 300% 300%;
   animation: buttonGradient 4s ease infinite;
-  border: none; /* Remove default border */
-  color: white; /* Make text white so it shows on gradient */
+  border: none;
+  color: white;
 }
 
 @keyframes buttonGradient {
@@ -96,7 +96,7 @@ button {
 }
 
 button:hover {
-  transform: scale(1.05); /* Slightly grow on hover */
+  transform: scale(1.05);
   box-shadow: 0 0 20px rgba(139, 127, 184, 0.6);
 }
 .card-container {
